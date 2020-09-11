@@ -8,23 +8,28 @@ namespace pr_01_upr1
     {
       public string firstName;
       public string lastName;
-      public int age;
+      public int age; 
+      public Genders gender;
+      public enum Genders : int { Male, Female };
 
-      public Person(string _firstName, string _lastName, int _age)
+      public Person(string _firstName, string _lastName, int _age, Genders _genders)
       {
         firstName = _firstName;
-        lastName = _lastName; age = _age;
-      }
+        firstName = _firstName; 
+        lastName =_lastName; 
+        age = _age;
+        gender = _genders;
+    }
 
       public override string ToString()
       {
-        return firstName + " " + lastName + ", age " + age;
+        return firstName + " " + lastName + " (" + gender + "), age " + age;
       }
     }
     static void Main(string[] args)
     {
 
-      Person p = new Person("Artem", "Moiseenko", 19); 
+      Person p = new Person("Artem", "Moiseenko", 19, Person.Genders.Male); 
       Console.WriteLine(p);
 
     }
