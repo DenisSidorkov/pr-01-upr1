@@ -24,7 +24,7 @@ namespace pr_01_upr1
     static void Main(string[] args)
     {
 
-      Person p = new Person("Tony", "Allen", 32); 
+      Person p = new Person("Artem", "Moiseenko", 19); 
       Console.WriteLine(p);
 
     }
